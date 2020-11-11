@@ -3,9 +3,16 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
    
-    <h3>Registro para voluntarios</h3>
+    <h2>¿Quieres ser parte del voluntariado de emergencias?</h2>
+    <h6>Laa gestión de voluntarios en contexto de emergencia
+      resulta ser de vital importancia, nos interesa tu colaboración, únete a nosotros.</h6>
     <ul>
+       <div class="row">
+    <div class="mx-auto">
       <router-link to="/VistaRegistro">Ir a registro</router-link>
+    </div>
+  </div>
+     
     </ul>
     <h3>VueJs </h3>
     <ul>
