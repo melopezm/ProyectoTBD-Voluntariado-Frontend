@@ -23,6 +23,7 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
+
 // import MiComponente from '@/components/MiComponente.vue'
 export default {
   name: 'Home',

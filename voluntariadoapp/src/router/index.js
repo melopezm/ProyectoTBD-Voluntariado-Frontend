@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 //import { components } from 'vue/types/umd'
 import Home from '../views/Home.vue'
 import VistaRegistro from '../views/VistaRegistro.vue'
+import Formulario from '../views/Formulario.vue'
 
 Vue.use(VueRouter)
 
@@ -16,7 +17,17 @@ Vue.use(VueRouter)
     path: '/vistaRegistro',
     name:'vistaRegistro',
     component: VistaRegistro
+  },
+  {
+    path: '/formulario',
+    name: 'formulario',
+    component: Formulario
   }
+  /*{
+    path: '/formulario',
+    name: 'formulario',
+    component: Formulario
+  }*/
  
 ]
 
