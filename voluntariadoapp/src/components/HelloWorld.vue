@@ -1,5 +1,6 @@
 <template> <!-- codigo html del componente, cada vez que se llame al componente Vue inserta el contenido de esta etiqueta dentro del DOM de la página web -->
-
+  <body>
+    
   <div class="hello">
     <h1>{{ msg }}</h1>
    
@@ -9,12 +10,12 @@
     <ul>
        <div class="row">
     <div class="mx-auto">
-      <router-link to="/VistaRegistro">Ir a registro</router-link>
+      <router-link to="/Formulario"> <button class="btn btn-primary">Ir a formulario de registro </button></router-link>
     </div>
   </div>
      
     </ul>
-    <h3>VueJs </h3>
+    <h3>Vue </h3>
     <ul>
       <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
     
@@ -24,6 +25,7 @@
 
     </ul>
   </div>
+  </body>
 </template>
 
 <!-- la lógica del componente, se crean métodos, variables, llamadas al backend; la funcionalidad y el código js que esta relacionado con el template -->
@@ -40,7 +42,6 @@ export default {
 
 <!-- Estilos del componente, aqui se crean estilos css o scss para los elementos de la etiqueta-->
 <style scoped>
-
 ul {
   list-style-type: none;
   padding: 0;
@@ -52,4 +53,8 @@ li {
 a {
   color: #42b983;
 }
+body{
+  background-color: lightblue;
+}
+
 </style>

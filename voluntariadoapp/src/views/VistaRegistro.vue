@@ -1,43 +1,25 @@
 <template>
-<body style="background-color:rgb(176,196,222);">
-  <div class="container-fluid"> 
-       <div class="text-center">
-        <img src="../assets/Voluntariado.png" class="rounded" alt="responsive image" width="650" height="250">
-    </div>
-   
-    <div>
-       <div class="row">
-    <div class="mx-auto">
-      <HelloWorld msg="Bienvenido Voluntario"/>
-   
-      <h1>Registrate con nosotros</h1>
-        <button class="btn btn-success">REGISTRARSE COMO VOLUNTARIE </button> <br>
-          </div>
-          <div>
-            </div>
-        </div>
-            
-          </div>
-        </div>
-      </body>
+<div>
+
+</div>
+    
 </template>
 
 <script>
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
-//import Click from '@/components/MiComponente.vue'
+//import Fondo from '@/components/Fondo.vue'
 export default {
-  name: 'Home',
+  name: 'vistaRegistro',
   components: {
-  //  HelloWorld,
+  //Fondo
   // Click
   }
 }
-</script>
+</script> 
 
-<style scoped>
+<style  >
 
-h1{
-  color: rgb(15, 15, 15);
-}
+
+
 </style>

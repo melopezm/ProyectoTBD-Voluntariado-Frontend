@@ -1,7 +1,7 @@
 <template>
-
-    
+  <body>
     <FormularioVoluntario></FormularioVoluntario>
+  </body>
     
 </template>
 
@@ -19,3 +19,9 @@ export default {
   }
 }
 </script>
+
+<style >
+
+
+
+</style>
