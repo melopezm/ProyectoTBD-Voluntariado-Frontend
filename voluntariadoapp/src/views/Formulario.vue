@@ -1,6 +1,7 @@
 <template>
   <body>
     <FormularioVoluntario></FormularioVoluntario>
+    
   </body>
     
 </template>
