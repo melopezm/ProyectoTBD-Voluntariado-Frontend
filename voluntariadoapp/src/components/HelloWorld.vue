@@ -5,26 +5,17 @@
     <h1>{{ msg }}</h1>
    
     <h2>¿Quieres ser parte del voluntariado de emergencias?</h2>
-    <h6>Laa gestión de voluntarios en contexto de emergencia
+     <h6>Laa gestión de voluntarios en contexto de emergencia
       resulta ser de vital importancia, nos interesa tu colaboración, únete a nosotros.</h6>
-    <ul>
+      <ul>
        <div class="row">
-    <div class="mx-auto">
-      <router-link to="/Formulario"> <button class="btn btn-primary">Ir a formulario de registro </button></router-link>
-    </div>
-  </div>
+               <div class="mx-auto">
+                <router-link to="/Formulario"> <button class="btn btn-primary">Ir a formulario de registro </button></router-link>
+              </div>
+          </div>
      
-    </ul>
-    <h3>Vue </h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-    
-    </ul>
-
-    <ul>
-
-    </ul>
-  </div>
+        </ul>
+    </div>
   </body>
 </template>
 

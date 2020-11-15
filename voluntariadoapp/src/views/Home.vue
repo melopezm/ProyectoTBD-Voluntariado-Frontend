@@ -1,13 +1,13 @@
 <template>
 <body>
   <div class="container">
-    <div class="text-center">
+    <div class="text-center"> <br>
         <img src="../assets/Voluntariado.png" class="rounded" alt="responsive image" width="650" height="250">
     </div>
 <br>
  <div class="row">
     <div class="mx-auto">
-      <HelloWorld msg="Bienvenido"/>
+      <HelloWorld msg="Bienvenido"/> 
     </div>
   </div>
 
@@ -69,6 +69,8 @@ export default {
 body{
   background-color:lightblue;
 }
-
+label {
+  font : .8em "typewriter", sans-serif;
+}
 </style>
 

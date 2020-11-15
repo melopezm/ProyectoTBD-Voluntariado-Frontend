@@ -19,12 +19,12 @@
    --> 
     <div>
         <h1>Registro de voluntariado</h1> <br> <br>
-  <form action="/action_page.php"> 
+  <form action="/"> 
     <label for="fname"> Ingrese su nombre</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <input type="text" id="fname" name="firstname" placeholder="Nombre..">
 
     <label for="lname">Ingrese su apellido</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <input type="text" id="lname" name="lastname" placeholder="Apellido..">
 
     <label for="rut">RUT</label>
     <input type="text" id="rut" name="rut" placeholder="11.111.111-1">
@@ -40,14 +40,6 @@
     
 
     
-    <!---
-    <label for="categoria">Categoria Voluntariado</label>
-    <select id="category" name="category">
-      <option value="InForestal">Incendios forestales</option>
-      <option value="Derrumbes">Derrumbes</option>
-      <option value="Inundaciones">Inundaciones</option>
-    </select>
-    --->
 
     <div class= "row">
       <div class= "col-sm">
@@ -111,8 +103,56 @@
       </div>
 
     </div>
-  
-    <input type="submit" value="Registrarse">
+    
+ <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Registrarse
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">¿Estas seguro?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Estas opciones se podrán modificar posteriormente.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
+
+        <input type="submit" value="Registrarse">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--    <input type="submit" value="Registrarse"> -->
   </form>
 </div>
 
@@ -130,6 +170,10 @@
 </script>
 
 <style scoped>
+
+
+
+
 input[type=text], select {
   width: 100%;
   padding: 12px 20px;
@@ -160,5 +204,47 @@ div {
   background-color: #f2f2f2;
   padding: 20px;
 }
+
+label {
+  font : .8em "typewriter", sans-serif;
+}
+
+input, textarea {
+  font    : .9em/1.5em "handwriting", sans-serif;
+
+  border  : none;
+  padding : 0 10px;
+  margin  : 0;
+  width   : 240px;
+
+  background: none;
+}
+input:focus, textarea:focus {
+  background   : rgba(0,0,0,.1);
+  border-radius: 5px;
+  outline      : none;
+}
+
+input {
+    height: 2.5em; /* for IE */
+    vertical-align: middle; /* This is optional but it makes legacy IEs look better */
+}
+
+textarea {
+  display : block;
+
+  padding : 10px;
+  margin  : 10px 0 0 -10px;
+  width   : 340px;
+  height  : 360px;
+
+  resize  : none;
+  overflow: auto;
+}
+
+
+
+
+
 
 </style>>
