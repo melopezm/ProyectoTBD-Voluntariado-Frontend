@@ -29,14 +29,26 @@
     <label for="rut">RUT</label>
     <input type="text" id="rut" name="rut" placeholder="11.111.111-1">
 
+    <label for="lmail">Ingrese su correo electronico</label>
+    <input type="text" id="lmail" name="mail" placeholder="name@ins.com">
+    
+    <label for="ltelefono">Ingrese su telefono</label>
+    <input type="text" id="ltelefono" name="telefono" placeholder="987654321">
+
+    <label for="ldate" class="mr-3"> Ingrese su fecha de nacimiento</label>
+    <input id="ldate" name="date" type="date">
     
 
+    
+    <!---
     <label for="categoria">Categoria Voluntariado</label>
     <select id="category" name="category">
       <option value="InForestal">Incendios forestales</option>
       <option value="Derrumbes">Derrumbes</option>
       <option value="Inundaciones">Inundaciones</option>
     </select>
+    --->
+
     <div class= "row">
       <div class= "col-sm">
         <div class="form-check">
