@@ -1,29 +1,13 @@
 <template>
    <body>
-       
-     <!--
-    <form action="">
-        <h1>Postular a voluntariado</h1>
-        <div class="form-row">
-            <div class="form-group col-md-3">
-                <label for="nombreInput">Ingresa tu nombre</label>
-                <input type="email" class="form-control" id="nombreInput" placeholder="Your name..">
-            </div>
-            <div class="form-group col-md-6">
-                <label for="apellidoMInput">Ingresa tu apellido</label>
-                <input type="email" class="form-control" id="nombreInput" placeholder="Your last name..">
-            </div>
-        </div>
-        <button type="button" class="btn btn-primary">Registrarse</button>
-    </form>
-   --> 
+  
     <div>
         <h1>Registro de voluntariado</h1> <br> <br>
   <form action="/">
   <div class="col-xs12 col-sm-8 col-md-6">
       <div class="form-group">
-        <label for="fname"> Ingrese su nombre</label>
-        <input type="text" id="fname" name="fname" placeholder="Nombre.." v-model='datosUser.nombre'>
+        <label for="nombre"> Ingrese su nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre.." v-model='datosUser.nombre'>
       </div>
       <div class="form-group">
     <label for="lname">Ingrese su apellido</label>
@@ -124,7 +108,7 @@
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
 
 
-        <input type="submit" value="Registrarse">
+        <input type="submit" @click="register" value="Registrarse">
       </div>
     </div>
   </div>
@@ -159,6 +143,8 @@
 
 
 <script>
+//import Axios from 'axios'
+import axios from "axios";
     export default {
         name: 'FormularioVoluntario',
         data(){
@@ -169,13 +155,44 @@
             email:'',
             telefono:'',
             fnacimiento:'',
-            rut:'',
-            },
+            rut:''},
             
             abilities:[]
+            }
+          },
+        methods:{
+          register(){
+            axios.post('http://localhost:8081/volunteers', {
+              nombre:this.datosUser.nombre,
+              apellido:this.datosUser.apellido,
+              correo_electronico:this.datosUser.email,
+              celular:this.datosUser.telefono,
+              fnacimiento:this.datosUser.fnacimiento,
+              rut:this.datosUser.rut,
+              habilidad: this.abilities
+            })
+            .then(Response => {
+              console.log(Response.data);
+            })
+            .catch(err =>{
+              console.log(err);
+            })
+
           }
+
         }
 
+
+      /*created() {
+        let post = {
+        title: 'foo',
+        body: 'bar',
+        userId: 1
+        };
+        axios.post("https://jsonplaceholder.typicode.com/posts", post).then((result) => {
+        console.log(result);
+  });
+} */
 
 
 

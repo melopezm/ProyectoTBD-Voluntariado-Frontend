@@ -10,7 +10,7 @@ Vue.config.productionTip = false
 
 //Instancia de axios se configura con URL base del backend
 const axiosInstance = axios.create({ 
-  baseURL: 'http://localhost:3000'
+  baseURL: 'http://localhost:8081/'
 })
 
 //Para acceder a axios desde this.$http
