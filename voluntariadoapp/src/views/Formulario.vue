@@ -7,7 +7,7 @@
 </template>
 
 <script>
-// @ is an alias to /src
+//import axios from 'axios'// @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
 //import Click from '@/components/MiComponente.vue'
 import FormularioVoluntario from '@/components/FormularioVoluntario.vue'
