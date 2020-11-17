@@ -20,6 +20,7 @@
     <div>
         <h1>Registro de voluntariado</h1> <br> <br>
   <form action="/">
+  <div class="col-xs12 col-sm-8 col-md-6">
       <div class="form-group">
         <label for="fname"> Ingrese su nombre</label>
         <input type="text" id="fname" name="fname" placeholder="Nombre.." v-model='datosUser.nombre'>
@@ -32,6 +33,7 @@
       <label for="rut">RUT</label>
       <input type="text" id="rut" name="rut" placeholder="11.111.111-1" v-model='datosUser.rut'>
     </div>
+  
 
     <div class="form-group">
         <label for="lmail">Ingrese su correo electronico</label>
@@ -47,83 +49,59 @@
     <label for="ldate" class="mr-3"> Ingrese su fecha de nacimiento</label>
     <input id="ldate" name="date" type="date" v-model='datosUser.fnacimiento'>
     </div>
+<div class="row">
+  <div class="col">
+    <div class="panel panel-default">
+    <div class="form-goup">
+      <label for="Habilidad 1"></label>
+     <input type="checkbox" id="Habilidad 1" value="1" v-model="abilities">Habilidad 1
+        <label for="Habilidad 2"></label>
+     <input type="checkbox" id="Habilidad 2" value="2" v-model="abilities">Habilidad 2
+      <label for="Habilidad 3"></label>
+     <input type="checkbox" id="Habilidad 3" value="3" v-model="abilities">Habilidad 3
+        <label for="Habilidad 4"></label>
+      <input type="checkbox" id="Habilidad 4" value="4" v-model="abilities">Habilidad 4
+        <label for="Habilidad 5"></label>
+      <input type="checkbox" id="Habilidad 5" value="5" v-model="abilities">Habilidad 5
+        <label for="Habilidad 6"></label>
+      <input type="checkbox" id="Habilidad 6" value="6" v-model="abilities">Habilidad 6
+      <label for="Habilidad 7"></label>
+      <input type="checkbox" id="Habilidad 7" value="7" v-model="abilities">Habilidad 7
+        <label for="Habilidad 8"></label>
+      <input type="checkbox" id="Habilidad 8" value="8" v-model="abilities">Habilidad 8
+      <label for="Habilidad 1"></label>
+      <input type="checkbox" id="Habilidad 9" value="9" v-model="abilities">Habilidad 9
+        <label for="Habilidad 2"></label>
+      <input type="checkbox" id="Habilidad 10" value="10" v-model="abilities">Habilidad 10
+      <label for="Habilidad 3"></label>
+      <input type="checkbox" id="Habilidad 11" value="11" v-model="abilities">Habilidad 11
+        <label for="Habilidad 4"></label>
+      <input type="checkbox" id="Habilidad 12" value="12" v-model="abilities">Habilidad 12
+    </div>
+  </div>
+  </div>
+
+    </div>
+
     <div class="row"> 
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3>DATOS</h3>
           <div class="panel-body">
             <p>Nombre: {{datosUser}}</p>
-            <p>Apellido: {{habilities}}</p>
+            
+            <p>opcion de envio:
+              <ul>
+                <li v-for= "item in abilities" :key="item"> {{item}}</li>
+              </ul>
+            </p>
           </div>
         </div>
       </div>
     </div>
-
+  </div>
     
-
-    <div class= "row">
-      <div class= "col-sm">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" v-model="habilities.hab1">
-            <label class="form-check-label" for="defaultCheck1"> Habilidad 1</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" v-model="habilities.hab2">
-          <label class="form-check-label" for="defaultCheck1"> Habilidad 2</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" v-model="habilities.hab3">
-          <label class="form-check-label" for="defaultCheck1"> Habilidad 3</label>
-        </div>
-      </div>
-
-      <div class="col-sm">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" v-model="habilities.hab4">
-          <label class="form-check-label" for="defaultCheck1"> Habilidad 4</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" v-model="habilities.hab5">
-          <label class="form-check-label" for="defaultCheck1"> Habilidad 5</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" v-model="habilities.hab6">
-          <label class="form-check-label" for="defaultCheck1"> Habilidad 6</label>
-        </div>
-      </div>
-
-      <div class="col-sm">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" v-model="habilities.hab7">
-          <label class="form-check-label" for="defaultCheck1"> Habilidad 7</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" v-model="habilities.hab8">
-          <label class="form-check-label" for="defaultCheck1"> Habilidad 8</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" v-model="habilities.hab9">
-          <label class="form-check-label" for="defaultCheck1"> Habilidad 9</label>
-        </div>
-      </div>
-
-      <div class="col-sm">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" v-model="habilities.hab10">
-          <label class="form-check-label" for="defaultCheck1"> Habilidad 10</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" v-model="habilities.hab11">
-          <label class="form-check-label" for="defaultCheck1"> Habilidad 11</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" v-model="habilities.hab12">
-          <label class="form-check-label" for="defaultCheck1"> Habilidad 12</label>
-        </div>
-      </div>
-
-    </div>
-    
+  
  <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Registrarse
@@ -194,24 +172,7 @@
             rut:'',
             },
             
-            habilities:{
-                 hab1:'',
-             hab2:'',
-              hab3:'',
-               hab4:'',
-                hab5:'',
-                 hab6:'',
-                  hab7:'',
-                   hab8:'',
-                    hab9:'',
-                     hab10:'',
-                      hab11:'',
-                       hab12:'',
-            }
-         
-
-
-
+            abilities:[]
           }
         }
 
