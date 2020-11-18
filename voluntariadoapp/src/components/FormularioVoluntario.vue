@@ -183,7 +183,7 @@ import axios from "axios";
 
           },
           check(){
-            if(this.nombre && this.apellido && this.email && this.telefono && this.fnacimiento && this.rut){
+            if(this.nombre && this.apellido && this.email && this.telefono && this.telefono.length > 8 && this.fnacimiento && this.rut && this.rut.lenght > 8){
               return true;
             }
             this.errors = [];
@@ -196,13 +196,13 @@ import axios from "axios";
             if(!this.email){
               this.errors.push('El mail es obligatorio');
             }
-            if(!this.telefono){
+            if(!this.telefono || this.telefono.length > 8){
               this.errors.push('El telefono es obligatorio');
             }
             if(!this.fnacimiento){
               this.errors.push('La fecha de nacimiento es obligatoria');
             }
-            if(!this.rut){
+            if(!this.rut || this.telefono.length > 8){
               this.errors.push('El RUT es obligatorio');
             }
             return false;
