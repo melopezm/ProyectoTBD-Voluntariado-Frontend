@@ -182,7 +182,7 @@ import axios from "axios";
             })
 
           },
-          pepe(){
+          check(){
             if(this.nombre && this.apellido && this.email && this.telefono && this.fnacimiento && this.rut){
               return true;
             }
