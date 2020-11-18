@@ -157,8 +157,11 @@ import axios from "axios";
             fnacimiento:'',
             rut:''},
             
-            abilities:[]
+            abilities:[],
+            
+            errors:[]
             }
+            
           },
         methods:{
           register(){
@@ -178,6 +181,31 @@ import axios from "axios";
               console.log(err);
             })
 
+          },
+          pepe(){
+            if(this.nombre && this.apellido && this.email && this.telefono && this.fnacimiento && this.rut){
+              return true;
+            }
+            this.errors = [];
+            if(!this.nombre){
+              this.errors.push('El nombre es obligatorio');
+            }
+            if(!this.apellido){
+              this.errors.push('El apellido es obligatorio');
+            }
+            if(!this.email){
+              this.errors.push('El mail es obligatorio');
+            }
+            if(!this.telefono){
+              this.errors.push('El telefono es obligatorio');
+            }
+            if(!this.fnacimiento){
+              this.errors.push('La fecha de nacimiento es obligatoria');
+            }
+            if(!this.rut){
+              this.errors.push('El RUT es obligatorio');
+            }
+            return false;
           }
 
         }
