@@ -159,7 +159,8 @@ import axios from "axios";
             
             abilities:[],
             
-            errors:[]
+            errors:[],
+            pageAbilities:[]
             }
             
           },
@@ -206,9 +207,43 @@ import axios from "axios";
               this.errors.push('El RUT es obligatorio');
             }
             return false;
+          },
+          getAbilities(){
+            try{
+              axios.get('http://localhost:8081/abilities')
+                  .then(response =>{
+                      this.pageAbilities = response.data
+                    })
+                  .catch(e=>{
+                    this.erros.push(e)
+                  })
+            } 
+            catch(err){
+              console.log(err);
+            }
+
           }
 
         }
+
+      /*
+     
+      getAbilities(){
+        try{
+          axios.get('http://localhost:8081/volunteers')
+              .then(response =>{
+                  this.pageAbilities = response.data;
+                })
+              .catch(e=>{
+                this.erros.push(e);
+              })
+        } catch(err){
+          console.log(err);
+        }
+
+      }
+      */
+
 
 
       /*created() {
